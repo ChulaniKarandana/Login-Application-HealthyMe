@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Login Application</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="cnfpassword">Confirm Password</string>
+</resources>
