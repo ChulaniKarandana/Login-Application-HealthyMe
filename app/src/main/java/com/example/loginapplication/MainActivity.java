@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+     /*   getActionBar().setTitle("");
+        getActionBar().setIcon(R.drawable.icon);*/
 
         dataBaseHelper = new DataBaseHelper(this);
 
@@ -43,11 +45,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String username = nTextUsername.getText().toString().trim();
                 String password = nTextPassword.getText().toString().trim();
-                boolean result = dataBaseHelper.checkUser(username,password);
+                int result = dataBaseHelper.checkUser(username,password);
 
-                if (result == true) {
+                if (result != 0) {
                     Toast.makeText(MainActivity.this, "Successfully Logged In", Toast.LENGTH_SHORT).show();
                     Intent home = new Intent(MainActivity.this, HomeActivity.class);
+                    home.putExtra("EXTRA_SESSION_ID", result);
                     startActivity(home);
                 }
                 else {

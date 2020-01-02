@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".EditDataActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <EditText
+<!--    <EditText
         android:id="@+id/register_username"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:textSize="@dimen/activity_horizontal_margin"
-        android:hint="@string/username"/>
+        android:hint="@string/username"/>-->
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,16 +23,16 @@
         <TextView
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="100dp"
             android:textSize="@dimen/activity_horizontal_margin"
             android:hint="Select your age"
             android:gravity="center_vertical|left">
         </TextView>
         <NumberPicker
-            android:id="@+id/register_age_picker"
+            android:id="@+id/edit_age_picker"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="100dp"
             android:textSize="@dimen/activity_horizontal_margin"
             />
     </LinearLayout>
@@ -50,7 +50,7 @@
             android:gravity="center_vertical|left">
         </TextView>
         <NumberPicker
-            android:id="@+id/register_weight_picker"
+            android:id="@+id/edit_weight_picker"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:textSize="@dimen/activity_horizontal_margin"
@@ -71,7 +71,7 @@
             android:gravity="center_vertical|left">
         </TextView>
         <NumberPicker
-            android:id="@+id/register_height_picker"
+            android:id="@+id/edit_height_picker"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:textSize="@dimen/activity_horizontal_margin"
@@ -79,7 +79,7 @@
             />
     </LinearLayout>
 
-    <EditText
+    <!--<EditText
         android:id="@+id/register_password"
         android:layout_width="300dp"
         android:layout_height="45dp"
@@ -93,39 +93,14 @@
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:textSize="@dimen/activity_horizontal_margin"
-        android:hint="@string/cnfpassword"/>
+        android:hint="@string/cnfpassword"/>-->
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/edit_button"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:text="Register">
+        android:text="Update Data">
     </Button>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="20dp"
-            android:text="Already registered?">
-        </TextView>
-
-        <TextView
-            android:id="@+id/register_login"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:text="LOGIN">
-        </TextView>
-
-    </LinearLayout>
-
 
 </LinearLayout>

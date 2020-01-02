@@ -4,4 +4,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="cnfpassword">Confirm Password</string>
+    <string name="title_activity_data">DataActivity</string>
+    <string name="tab_text_1">My Data</string>
+    <string name="tab_text_2">Edit Data</string>
 </resources>
