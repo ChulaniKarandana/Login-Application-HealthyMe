@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditDataActivity"></activity>
+        <activity android:name=".StepCounter"/>
+        <activity android:name=".MainLightActivity" />
+        <activity android:name=".MainReminderActivity" />
+        <activity android:name=".BMICalculationActivity" />
+        <activity android:name=".EditDataActivity" />
         <activity android:name=".DataActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
@@ -20,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".NotifierAlarm" />
+        <receiver android:name=".NotifierLight" />
+
+        <service android:name=".LightSensorService" />
     </application>
 
 </manifest>

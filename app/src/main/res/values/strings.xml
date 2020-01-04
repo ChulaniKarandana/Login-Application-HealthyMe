@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Login Application</string>
+    <string name="app_name">HealthyMe</string>
 
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="cnfpassword">Confirm Password</string>
     <string name="title_activity_data">DataActivity</string>
-    <string name="tab_text_1">My Data</string>
-    <string name="tab_text_2">Edit Data</string>
+    <string name="empty_reminder_page_msg">No Reminders Set Click + to add the reminders</string>
 </resources>
