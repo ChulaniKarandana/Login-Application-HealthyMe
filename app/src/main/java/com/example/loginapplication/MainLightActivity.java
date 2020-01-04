@@ -5,6 +5,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -13,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainLightActivity extends AppCompatActivity {
 
     private Switch light_switch;
+    private Button light_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,9 @@ public class MainLightActivity extends AppCompatActivity {
         setContentView(R.layout.light_intensity_page);
 
         light_switch = findViewById(R.id.switch1);
+        light_back = findViewById(R.id.light_back);
+
+        final int sessionId = getIntent().getIntExtra("EXTRA_SESSION_ID", 0);
 
         final AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(MainLightActivity.this, LightSensorService.class);
@@ -36,6 +42,15 @@ public class MainLightActivity extends AppCompatActivity {
                     scheduler.cancel(scheduledIntent);
                 }
 
+            }
+        });
+
+        light_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toHome = new Intent(MainLightActivity.this, HomeActivity.class);
+                toHome.putExtra("EXTRA_SESSION_ID", sessionId);
+                startActivity(toHome);
             }
         });
     }

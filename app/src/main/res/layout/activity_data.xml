@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,81 +8,109 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="30dp"
+        android:text="Height"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="160dp"
-            android:text="Age">
-        </TextView>
-
-        <TextView
-            android:id="@+id/data_age"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:layout_marginTop="160dp"
-            android:textStyle="bold">
-        </TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="30dp"
-            android:text="Height">
-        </TextView>
-
-        <TextView
-            android:id="@+id/data_height"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold">
-        </TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="30dp"
-            android:text="Weight">
-        </TextView>
-
-        <TextView
-            android:id="@+id/data_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold">
-        </TextView>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/data_weight"
+        android:layout_width="61dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
 
     <Button
         android:id="@+id/data_edit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Edit Data">
-    </Button>
+        android:text="Edit Data"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/data_back_button"
+        android:layout_width="126dp"
+        android:layout_height="55dp"
+        android:text="Back"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
+
+    <TextView
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <TextView
+        android:layout_width="112dp"
+        android:layout_height="35dp"
+        android:text="Age"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.331"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <TextView
+        android:id="@+id/data_age"
+        android:layout_width="59dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/data_height"
+        android:layout_width="59dp"
+        android:layout_height="21dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

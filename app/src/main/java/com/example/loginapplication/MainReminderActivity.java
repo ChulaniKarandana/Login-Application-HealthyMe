@@ -46,6 +46,8 @@ public class MainReminderActivity extends AppCompatActivity {
 
         appDatabase = AppDatabase.geAppdatabase(MainReminderActivity.this);
 
+        final int sessionId = getIntent().getIntExtra("EXTRA_SESSION_ID", 0);
+
         add = findViewById(R.id.floatingButton);
         empty = findViewById(R.id.empty);
 
@@ -66,7 +68,8 @@ public class MainReminderActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainReminderActivity.this, MainLightActivity.class);
+                Intent myIntent = new Intent(MainReminderActivity.this, HomeActivity.class);
+                myIntent.putExtra("EXTRA_SESSION_ID", sessionId);
                 startActivity(myIntent);
             }
         });

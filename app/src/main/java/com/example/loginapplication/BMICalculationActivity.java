@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class BMICalculationActivity extends AppCompatActivity {
-    Button calculate, update;
+    Button calculate, update, backButton;
     DataBaseHelper db;
     TextView result,height, weight;
     @Override
@@ -26,6 +26,7 @@ public class BMICalculationActivity extends AppCompatActivity {
         calculate = findViewById(R.id.calculate);
         result = findViewById(R.id.result);
         update =findViewById(R.id.update_val);
+        backButton = findViewById(R.id.bmi_back_button);
 
 
         final int sessionId = getIntent().getIntExtra("EXTRA_SESSION_ID", 0);
@@ -45,6 +46,15 @@ public class BMICalculationActivity extends AppCompatActivity {
                 PUpdateIntent.putExtra("ACTIVITY", "BMI");
                 startActivity(PUpdateIntent);
                 finish();
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toHome = new Intent(BMICalculationActivity.this, HomeActivity.class);
+                toHome.putExtra("EXTRA_SESSION_ID", sessionId);
+                startActivity(toHome);
             }
         });
     }
@@ -68,22 +78,22 @@ public class BMICalculationActivity extends AppCompatActivity {
         }
     }
     private  void displayBMI(float bmi){
-        String bmi_lbl ="";
+        String bmi_lbl ="Status : ";
 
         if(Float.compare(bmi,15f)<=0){
-            bmi_lbl = "very severely underweight";
+            bmi_lbl = "Very severely underweight";
         }else if (Float.compare(bmi,15f)>0 && Float.compare(bmi,16f)<=0){
-            bmi_lbl = "severely underweight";
+            bmi_lbl = "Severely underweight";
         }else if (Float.compare(bmi,16f)>0 && Float.compare(bmi,18.5f)<=0){
-            bmi_lbl = "underweight";
+            bmi_lbl = "Underweight";
         }else if (Float.compare(bmi,18.5f)>0 && Float.compare(bmi,25f)<=0){
             bmi_lbl = "Normal";
         }else if (Float.compare(bmi,25f)>0 && Float.compare(bmi,35f)<=0){
-            bmi_lbl = "overweight";
+            bmi_lbl = "Overweight";
         }else if (Float.compare(bmi,35f)>0 && Float.compare(bmi,40f)<=0){
-            bmi_lbl = "severely overweight";
+            bmi_lbl = "Severely overweight";
         }else if (Float.compare(bmi,40f)>0){
-            bmi_lbl = "obsessive";
+            bmi_lbl = "Obsessive";
         }
         bmi_lbl = bmi + "\n" + bmi_lbl;
         result.setText(bmi_lbl);

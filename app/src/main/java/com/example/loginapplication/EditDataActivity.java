@@ -32,14 +32,6 @@ public class EditDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_data);
 
-/*        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);*/
-//        getSupportActionBar().setLogo(getResources().getDrawable(R.drawable.healthyicon));
-//        getSupportActionBar().setDisplayUseLogoEnabled(true);/**/
-        //getResources().getDrawable(R.drawable.healthyicon).setBounds(5,0,0,0);
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.healthyicon));
-        //this.getActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.healthyicon));
-
         nEditAge = (NumberPicker) findViewById(R.id.edit_age_picker);
         nEditHeight = (NumberPicker) findViewById(R.id.edit_height_picker);
         nEditWeight = (NumberPicker) findViewById(R.id.edit_weight_picker);

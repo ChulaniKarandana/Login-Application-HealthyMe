@@ -84,6 +84,7 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:inputType="textPassword"
         android:textSize="@dimen/activity_horizontal_margin"
         android:hint="@string/password"/>
 
@@ -92,6 +93,7 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:inputType="textPassword"
         android:textSize="@dimen/activity_horizontal_margin"
         android:hint="@string/cnfpassword"/>
 

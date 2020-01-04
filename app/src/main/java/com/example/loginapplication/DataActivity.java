@@ -17,6 +17,7 @@ public class DataActivity extends AppCompatActivity {
     private TextView nWeight;
 
     private Button nEditButton;
+    private Button nBackButton;
 
     DataBaseHelper dataBaseHelperData;
 
@@ -28,6 +29,7 @@ public class DataActivity extends AppCompatActivity {
         nAge = (TextView) findViewById(R.id.data_age);
         nHeight = (TextView) findViewById(R.id.data_height);
         nWeight = (TextView) findViewById(R.id.data_weight);
+        nBackButton = (Button) findViewById(R.id.data_back_button);
 
         nEditButton = (Button) findViewById(R.id.data_edit_button);
 
@@ -47,6 +49,15 @@ public class DataActivity extends AppCompatActivity {
                 Intent toedit = new Intent(DataActivity.this, EditDataActivity.class);
                 toedit.putExtra("EXTRA_SESSION_ID", sessionId);
                 startActivity(toedit);
+            }
+        });
+
+        nBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toHome = new Intent(DataActivity.this, HomeActivity.class);
+                toHome.putExtra("EXTRA_SESSION_ID", sessionId);
+                startActivity(toHome);
             }
         });
 
