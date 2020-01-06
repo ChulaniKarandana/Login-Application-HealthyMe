@@ -39,9 +39,9 @@ public class DataActivity extends AppCompatActivity {
 
         ArrayList<Object> fetched = dataBaseHelperData.getDetails(sessionId);
 
-        nAge.setText(fetched.get(0).toString());
-        nHeight.setText(fetched.get(1).toString());
-        nWeight.setText(fetched.get(2).toString());
+        nAge.setText(fetched.get(0).toString() + " years");
+        nHeight.setText(fetched.get(1).toString() + " cm");
+        nWeight.setText(fetched.get(2).toString() + " kg");
 
         nEditButton.setOnClickListener(new View.OnClickListener() {
             @Override

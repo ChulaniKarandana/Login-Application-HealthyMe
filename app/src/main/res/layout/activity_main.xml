@@ -12,11 +12,20 @@
         android:icon="@drawable/icon"
         android:label="" />
 -->
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/healthyicon"
+        />
+
     <EditText
         android:id="@+id/login_username"
         android:layout_width="252dp"
         android:layout_height="45dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/username" />
 
     <EditText
@@ -29,11 +38,10 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
+        android:layout_width="259dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:text="Login">
-    </Button>
+        android:text="Login"></Button>
     
     <LinearLayout
         android:layout_width="wrap_content"
@@ -43,6 +51,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_marginTop="20dp"
             android:text="not registered?">
         </TextView>
 
@@ -51,6 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:text="REGISTER">
         </TextView>
